@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волонтер и социальный активист</title>
+    <style>
+        /*Работа над внешним видом сайта
+        Общие настройки */
+        body { font-family: Arial, Helvetica, sans-serif;}
+        /*Заголовок*/
+        header { margin-top: 2rem; padding: 3.5rem 1rem;
+            background-color: crimson; color: aliceblue; text-align: center;}
+        /*Подзаголовки */
+        h2, h3 { color: crimson;} 
+        /*Изображение */
+        img {border-radius: 1rem;}
+        /*Боковая панель */
+        aside {
+            background-color: indianred; color: aliceblue; display: flex;
+            border-radius: 1rem; margin: 17rem auto 1 rem;
+        }
+        /*Основной блок с информацией */
+        main {max-width: 900px;
+            margin: -2rem auto 2rem;
+            background-color: antiquewhite;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;}
+        /*Настройки элементов обратной свзи */
+        textarea {resize: vertical; min-height: 120px;}
+        button {background-color: crimson; color: aliceblue;}
+        /*Нижняя область */
+        footer { margin-top: 2rem; padding: 2rem 1 rem;
+            text-align: center; color: aliceblue;
+            background-color: crimson;
+        }
+        /*Разделы, общий вид */
+        section {background-color: white; border-radius: 0.5rem;}
+    </style>
+</head>
+<body> 
+    <!--Работа над основной разметкой сайта
+    Заголовок страницы -->
+    <header>
+        <h1>Таргаева Виктория</h1>
+        <p>Волонтер и социальный активист</p>
+        
+    </header>
+    <main>
+        <!--Изображение -->
+        <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
+        <!--Боковая панель -->
+        <aside>Основное место взятия заданий для волонтерской деятельности - сайт Добро.ру</aside>
+        <!--Дополнительные параграфы обо мне
+        Секция навыков -->
+        <section>
+            <h2>Навыки</h2>
+            <ul>
+                <li>Умение разговаривать со старшими, слушать и ухаживать за ними;</li>
+                <li>Трудолюбие, упорность, выносливость</li>
+                <li>Все схватываю на лету.</li>
+            </ul>
+        </section>
+        <!--Секция проектов -->
+        <section>
+            <h2>Проекты</h2>
+            <h3>В которых участвовала лично:</h3>
+            <ul>
+                <li>Уборка территорий, субботники;</li>
+                <li>Высадка деревьев;</li>
+                <li>Помощь во время мероприятий.</li>
+            </ul>
+            <h3>Где хотелось бы поучаствовать:</h3>
+            <ul>
+                <li>Поиск пропавших людей;</li>
+                <li>Готовка для нуждающихся;</li>
+                <li>Организация творческого мероприятия или мастер-класса.</li>
+            </ul>
+        </section>
+        <!--Настройка окна обратной связи -->
+        <section>
+            <h2>Обратная связь</h2>
+            <form action="">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="name" placeholder="Иванов Иван Иванович" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="email@domain.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea name="message" id="message" rows="4" placeholder="Введите ваше сообщение:"></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <!--Нижняя панель -->
+    <footer><p>2026 Сайт Таргаевой Виктории. Все права защищены.</p></footer>
+</body>
+</html>

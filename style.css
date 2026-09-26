@@ -1,0 +1,73 @@
+/*Работа над внешним видом сайта
+        Общие настройки */
+        :root {background-color: crimson;}
+        body { font-family: Arial, Helvetica, sans-serif;}
+          /*Заголовок*/
+        header { margin-top: -2rem; padding: 3.5rem 1rem;
+            background-color: crimson; color: aliceblue; text-align: center;}
+        
+        /*Подзаголовки */
+        h2, h3 { color: crimson; margin-left: 0.5rem;} 
+        /*Изображение */
+        img {border-radius: 1rem; margin-right: 2rem;}
+        /*Боковая панель */
+        aside {
+            background-color: crimson; color: aliceblue; display: flex;
+            border-radius: 0.5rem; margin: 1rem auto 1rem; padding: 0.3rem; height: 100px;
+        }
+        .content-row{
+            display:flex;
+        }
+        /*Основной блок с информацией */
+        main {max-width: 900px;
+            margin: -2rem auto 2rem;
+            background-color: antiquewhite;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;}
+        /*Настройки элементов обратной свзи */
+        textarea {resize: vertical; min-height: 120px;}
+        /*Настроки кнопки*/
+        /*Анимация кнопки при наведении*/
+        @keyframes crsr_botton {
+            from{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        button {
+            background-color: aliceblue; color: crimson;
+            padding: 0.15rem; border-radius: 0.25rem; 
+        }
+        button:hover{
+            background-color: crimson; color: aliceblue;
+            animation-name: crsr_botton;
+            animation-duration: 2s;
+            animation-iteration-count: ease;
+        }
+        button:active{
+            background-color: crimson; color: aliceblue;
+            transform: translate(0px, 2px);
+        }
+        
+        /*Нижняя область */
+        footer { margin-bottom: -1rem; padding: 2rem 1rem;
+            text-align: center; color: aliceblue;
+            background-color: crimson;
+            font-size: smaller;
+        }
+        /*Разделы, общий вид */
+        section {background-color: white;
+            padding-bottom: 0.3rem; border-radius: 0.5rem;}
+        form { margin-left: 1rem;}

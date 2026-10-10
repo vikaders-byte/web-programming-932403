@@ -5,41 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Волонтер и социальный активист</title>
     <style>
-        /*Работа над внешним видом сайта
-        Общие настройки */
-        body { font-family: Arial, Helvetica, sans-serif;}
-        /*Заголовок*/
-        header { margin-top: 2rem; padding: 3.5rem 1rem;
-            background-color: crimson; color: aliceblue; text-align: center;}
-        /*Подзаголовки */
-        h2, h3 { color: crimson;} 
-        /*Изображение */
-        img {border-radius: 1rem;}
-        /*Боковая панель */
-        aside {
-            background-color: indianred; color: aliceblue; display: flex;
-            border-radius: 1rem; margin: 17rem auto 1 rem;
+        footer {  padding: 2rem 1rem; width: auto;
+            text-align: center; color: var(--color-primary);
+            background-color: var(--color-accent);
+            font-size: smaller; position:static;
         }
-        /*Основной блок с информацией */
-        main {max-width: 900px;
-            margin: -2rem auto 2rem;
-            background-color: antiquewhite;
-            border-radius: 1.5rem;
-            padding: 2.5rem;
-            position: relative;}
-        /*Настройки элементов обратной свзи */
-        textarea {resize: vertical; min-height: 120px;}
-        button {background-color: crimson; color: aliceblue;}
-        /*Нижняя область */
-        footer { margin-top: 2rem; padding: 2rem 1 rem;
-            text-align: center; color: aliceblue;
-            background-color: crimson;
-        }
-        /*Разделы, общий вид */
-        section {background-color: white; border-radius: 0.5rem;}
     </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
+<body class="container"> 
     <!--Работа над основной разметкой сайта
     Заголовок страницы -->
     <header>
@@ -47,14 +21,19 @@
         <p>Волонтер и социальный активист</p>
         
     </header>
-    <main>
-        <!--Изображение -->
-        <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
-        <!--Боковая панель -->
-        <aside>Основное место взятия заданий для волонтерской деятельности - сайт Добро.ру</aside>
+    <!--Основная разметка-->
+    <main class="content">
+        <div class="content-row">
+            <!--Изображение -->
+            <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
+            <!--Боковая панель -->
+            <aside>
+                Основное место взятия заданий для волонтерской деятельности - сайт <a href="https://dobro.ru/" class="inline-link">Добро.ру</a>.
+            </aside>
+        </div>
         <!--Дополнительные параграфы обо мне
         Секция навыков -->
-        <section>
+        <section style="margin-bottom: 20px;">
             <h2>Навыки</h2>
             <ul>
                 <li>Умение разговаривать со старшими, слушать и ухаживать за ними;</li>
@@ -81,7 +60,7 @@
         <!--Настройка окна обратной связи -->
         <section>
             <h2>Обратная связь</h2>
-            <form action="">
+            <form action="index.html">
             <div class="form-group">
                 <label for="name">Имя:</label>
                 <input type="text" name="name" id="name" placeholder="Иванов Иван Иванович" required>
@@ -94,7 +73,7 @@
                 <label for="message">Сообщение:</label>
                 <textarea name="message" id="message" rows="4" placeholder="Введите ваше сообщение:"></textarea>
             </div>
-            <button type="submit">Отправить</button>
+            <button type="submit"><span style="transform: rotate(45deg); display: block;">Отправить</span></button>
             </form>
         </section>
     </main>

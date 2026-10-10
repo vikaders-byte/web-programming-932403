@@ -1,0 +1,98 @@
+/*Работа над внешним видом сайта
+        Общие настройки */
+        :root {--back-color: #ffffff; --color-primary: #ffffff;
+            --color-accent: #dc143c; --font-main: Arial; --btn_elem_size: 60px;}
+        body { background-color: var(--color-primary);
+            font-family: var(--font-main); margin: 0px;}
+          /*Заголовок*/
+        header {background-color: var(--color-primary); position:static;
+            color: var(--color-accent); text-align: center;}
+        
+        /*Подзаголовки */
+        h2, h3 { color: var(--color-accent); margin-left: 0.5rem;} 
+        /*Изображение */
+        img {border-radius: 1rem; margin-right: 2rem;}
+        /*Боковая панель */
+        aside {
+            background-color: var(--color-primary);
+            color: var(--color-accent); position:sticky; top: 40px;
+            border-radius: 0.5rem; margin: 1rem auto 1rem;
+            padding: 0.3rem; height: 100px;
+        }
+        .inline-link{
+            color:#a52a2a;
+            display: inline;
+        }
+        .inline-link:focus{
+            color:#000000; text-decoration: none;
+        }
+        .content-row{
+            display:flex;
+        }
+        /*Основной блок с информацией */
+        main {max-width: 900px;
+            margin: 2rem auto 2rem;
+            background-color: var(--color-accent);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;}
+        /*Настройки элементов обратной свзи */
+        textarea {resize: vertical; min-height: 120px;}
+        textarea:focus {background-color:#cd5c5c;}
+        input:focus {background-color:#cd5c5c;}
+        /*Настроки кнопки*/
+        /*Анимация кнопки при наведении*/
+        @keyframes crsr_botton {
+            from{
+                transform: rotate(-45deg) scale(1);
+            }
+            25%{
+                transform: rotate(-45deg) scale(1.1);
+            }
+            50% {
+                transform: rotate(-45deg) scale(1);
+            }
+            75% {
+                transform: rotate(-45deg) scale(1.1);
+            }
+            to{
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+        /*Сама кнопка*/
+        button {
+            background-color: var(--color-accent); color: var(--color-primary);
+            width:var(--btn_elem_size); height: var(--btn_elem_size);
+            position: relative; transform: rotate(-45deg);
+            margin: 1rem; outline:none; cursor: pointer; border:none;
+        }
+        button::after, button::before{
+            content: ""; position:absolute; width: var(--btn_elem_size);
+            height: var(--btn_elem_size); background-color: var(--color-primary);
+            border-radius: 50%; background-color: var(--color-accent);
+        }
+        button::after{top: -30px; left: 0;}
+        button::before{top: 0; left: 30px;}
+        button:hover{
+            background-color: var(--color-accent); color: var(--color-primary);
+            animation-name: crsr_botton; 
+            animation-duration: 2s;
+        }
+        button:active{
+            background-color: var(--color-accent); color: var(--color-primary);
+            transform: rotate(-45deg) translate(0px, 2px);
+        }
+        button:focus, button:focus::after, button:focus::before{ background-color: #a52a2a;}
+        span{
+            position: relative; z-index: 1;align-items: center;
+            text-align: center; justify-content: center; 
+        }
+    
+        
+        /*Разделы, общий вид */
+        section {background-color: var(--color-primary);
+            padding-bottom: 0.3rem; border-radius: 0.5rem; position: static;}
+        form { margin-left: 1rem;}
+        div{
+            margin:5px;
+        }

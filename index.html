@@ -21,28 +21,34 @@
         <p>Волонтер и социальный активист</p>
         
     </header>
+    <!--Меню-->
+    <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#actions">Текущие акции</a>
+        <a href="#roles">Роли в команде</a>
+        <a href="#contact">Обратная связь</a>
+    </nav>
     <!--Основная разметка-->
     <main class="content">
-        <div class="content-row">
-            <!--Изображение -->
-            <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
-            <!--Боковая панель -->
+        <section id="about" >
+            <div class="content-row">
+                <!--Изображение -->
+                <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
+                <!--Боковая панель -->
+                
+            </div>
             <aside>
-                Основное место взятия заданий для волонтерской деятельности - сайт <a href="https://dobro.ru/" class="inline-link">Добро.ру</a>.
-            </aside>
-        </div>
-        <!--Дополнительные параграфы обо мне
-        Секция навыков -->
-        <section style="margin-bottom: 20px;">
+                    Основное место взятия заданий для волонтерской деятельности - сайт <a href="https://dobro.ru/" class="inline-link">Добро.ру</a>.
+                </aside>
+            <!--Дополнительные параграфы обо мне
+            Секция навыков -->
             <h2>Навыки</h2>
             <ul>
                 <li>Умение разговаривать со старшими, слушать и ухаживать за ними;</li>
                 <li>Трудолюбие, упорность, выносливость</li>
                 <li>Все схватываю на лету.</li>
             </ul>
-        </section>
-        <!--Секция проектов -->
-        <section>
+            <!--Секция проектов -->
             <h2>Проекты</h2>
             <h3>В которых участвовала лично:</h3>
             <ul>
@@ -50,6 +56,7 @@
                 <li>Высадка деревьев;</li>
                 <li>Помощь во время мероприятий.</li>
             </ul>
+            
             <h3>Где хотелось бы поучаствовать:</h3>
             <ul>
                 <li>Поиск пропавших людей;</li>
@@ -57,8 +64,53 @@
                 <li>Организация творческого мероприятия или мастер-класса.</li>
             </ul>
         </section>
+        
+        <section id="actions" style="margin-bottom: 20px;">
+            <h2>Текущие акции</h2>
+            <div class="art_action">
+                <article class="action_card">
+                    <h3 class="art_m_text">Субботник</h3>
+                    <time datetime="2026-10-03">3 октября 2026</time>
+                    <p><strong>Роль:</strong> участник</p>
+                    <p>Уборка территории дома от листвы и мусора.</p>
+                </article>
+                <article class="action_card">
+                    <h3 class="art_m_text">Собрание клуба</h3>
+                    <time datetime="2026-10-10">10 октября 2026</time>
+                    <p><strong>Роль:</strong> организатор</p>
+                    <p>Еженедельное собрание клуба настольных игр.</p>
+                </article>
+                <article class="action_card">
+                    <h3 class="art_m_text">Помощь в приюте</h3>
+                    <time datetime="2026-09-17">17 сентября 2026</time>
+                    <p><strong>Роль:</strong> волонтер</p>
+                    <p>Привоз корма в приюют, уход за животными.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="roles">
+            <h2>Роли в команде</h2>
+            <div class="art_roles">
+                <article class="role-card">
+                    <div class="role-icon" >📋</div>
+                    <h3 class="art_m_text">Организатор</h3>
+                    <p>Планирует мероприятие, подготавливает место проведения, собирает команду.</p>
+                </article>
+                <article class="role-card">
+                    <div class="role-icon" >🛠️</div>
+                    <h3 class="art_m_text">Участник</h3>
+                    <p>Исполняет указания руководителя или организатора, помогает во время мероприятия.</p>
+                </article>
+                <article class="role-card">
+                    <div class="role-icon" >👩‍🍳</div>
+                    <h3 class="art_m_text">Волонтер</h3>
+                    <p>Вместе с командой выполняет общественно значимую работу.</p>
+                </article>
+            </div>
+        </section>
         <!--Настройка окна обратной связи -->
-        <section>
+        <section id="contact">
             <h2>Обратная связь</h2>
             <form action="index.html">
             <div class="form-group">
@@ -73,11 +125,11 @@
                 <label for="message">Сообщение:</label>
                 <textarea name="message" id="message" rows="4" placeholder="Введите ваше сообщение:"></textarea>
             </div>
-            <button type="submit"><span style="transform: rotate(45deg); display: block;">Отправить</span></button>
+            <button type="submit"><span style="transform: rotate(45deg); display: block;">➤</span></button>
             </form>
         </section>
     </main>
     <!--Нижняя панель -->
-    <footer><p>2026 Сайт Таргаевой Виктории. Все права защищены.</p></footer>
+    <footer><p>&copy; 2026 Сайт Таргаевой Виктории. Все права защищены.</p></footer>
 </body>
 </html>

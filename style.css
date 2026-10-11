@@ -1,24 +1,47 @@
 /*Работа над внешним видом сайта
         Общие настройки */
-        :root {--back-color: #ffffff; --color-primary: #ffffff;
-            --color-accent: #dc143c; --font-main: Arial; --btn_elem_size: 60px;}
-        body { background-color: var(--color-primary);
-            font-family: var(--font-main); margin: 0px;}
+        :root {--color-primary: #ffffff; --font-main: Arial;
+            --color-accent: #dc143c; --color-back:#ffecec;
+            --btn_elem_size: 30px;}
+        body { background-color:var(--color-primary);
+            font-family: var(--font-main); margin: 0px;
+            font-size: 22px;
+        }
+        * {
+            box-sizing: border-box;
+        }
           /*Заголовок*/
         header {background-color: var(--color-primary); position:static;
             color: var(--color-accent); text-align: center;}
-        
+        /*Навигация*/
+        nav{
+            position:sticky; background-color: var(--color-accent);
+            padding: 1.5rem;
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 1rem; top: 0; z-index: 100;
+        }
+        a{
+            color: var(--color-primary); text-decoration: none; padding: 0.3rem;
+        }
+        a:hover, a:focus{
+            background-color: var(--color-primary); color: var(--color-accent);
+            padding: 0.3rem; border-radius: 0.2rem;
+        }
         /*Подзаголовки */
         h2, h3 { color: var(--color-accent); margin-left: 0.5rem;} 
         /*Изображение */
-        img {border-radius: 1rem; margin-right: 2rem;}
+        img {border-radius: 1rem; margin: 0.5rem;}
         /*Боковая панель */
         aside {
             background-color: var(--color-primary);
-            color: var(--color-accent); position:sticky; top: 40px;
+            color: var(--color-accent); top: 40px;
             border-radius: 0.5rem; margin: 1rem auto 1rem;
             padding: 0.3rem; height: 100px;
         }
+        .content-row{
+            display:flex;
+        }
+        /*Отображение ссылок*/
         .inline-link{
             color:#a52a2a;
             display: inline;
@@ -26,20 +49,38 @@
         .inline-link:focus{
             color:#000000; text-decoration: none;
         }
-        .content-row{
-            display:flex;
-        }
         /*Основной блок с информацией */
         main {max-width: 900px;
             margin: 2rem auto 2rem;
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
             border-radius: 1.5rem;
             padding: 2.5rem;
             position: relative;}
-        /*Настройки элементов обратной свзи */
+        /*Настройка карточек*/
+        .art_action{
+            display: flex;
+            flex-wrap: wrap; gap: 0.5rem;
+        }
+        .art_m_text{color: var(--color-primary);}
+        .action_card{
+            flex: 1 1; padding: 0.5rem; background-color: var(--color-accent);
+            border-radius: 1rem; color: var(--color-primary);
+        }
+        /*Grid*/
+        .art_roles{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .role-card{
+            display:flex; flex-direction: column; align-items: center;
+            padding: 0.5rem; background-color: var(--color-accent);
+            border-radius: 1rem; color: var(--color-primary);
+        }
+        /*Настройки элементов обратной связи */
         textarea {resize: vertical; min-height: 120px;}
-        textarea:focus {background-color:#cd5c5c;}
-        input:focus {background-color:#cd5c5c;}
+        textarea:focus {background-color:var(--color-back);}
+        input:focus {background-color:var(--color-back);}
         /*Настроки кнопки*/
         /*Анимация кнопки при наведении*/
         @keyframes crsr_botton {
@@ -71,8 +112,8 @@
             height: var(--btn_elem_size); background-color: var(--color-primary);
             border-radius: 50%; background-color: var(--color-accent);
         }
-        button::after{top: -30px; left: 0;}
-        button::before{top: 0; left: 30px;}
+        button::after{top: -15px; left: 0;}
+        button::before{top: 0; left: 15px;}
         button:hover{
             background-color: var(--color-accent); color: var(--color-primary);
             animation-name: crsr_botton; 
@@ -91,8 +132,49 @@
         
         /*Разделы, общий вид */
         section {background-color: var(--color-primary);
+            box-shadow: 0 0 10px 5px var(--color-accent);
             padding-bottom: 0.3rem; border-radius: 0.5rem; position: static;}
         form { margin-left: 1rem;}
         div{
             margin:5px;
         }
+        /*Для мобильной версии*/
+    @media (max-width: 900px) {
+        .action-card {
+            flex: 1 1 calc(50% - 1rem);   /* 2 в ряд */
+        }
+        .art_roles {
+            grid-template-columns: 1fr 1fr;  /* 2 колонки */
+        }
+    }
+@media (max-width: 600px) {
+    header, h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav, a {
+        text-align: center;
+    }
+
+    .action-card {
+        flex: 1 1 100%;   /* 1 в ряд */
+    }
+
+    .art_roles {
+        grid-template-columns: 1fr;   /* 1 колонка */
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding: 1rem; margin: 1rem;
+    }
+}

@@ -5,41 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Волонтер и социальный активист</title>
     <style>
-        /*Работа над внешним видом сайта
-        Общие настройки */
-        body { font-family: Arial, Helvetica, sans-serif;}
-        /*Заголовок*/
-        header { margin-top: 2rem; padding: 3.5rem 1rem;
-            background-color: crimson; color: aliceblue; text-align: center;}
-        /*Подзаголовки */
-        h2, h3 { color: crimson;} 
-        /*Изображение */
-        img {border-radius: 1rem;}
-        /*Боковая панель */
-        aside {
-            background-color: indianred; color: aliceblue; display: flex;
-            border-radius: 1rem; margin: 17rem auto 1 rem;
+        footer {  padding: 2rem 1rem; width: auto;
+            text-align: center; color: var(--color-primary);
+            background-color: var(--color-accent);
+            font-size: smaller; position:static;
         }
-        /*Основной блок с информацией */
-        main {max-width: 900px;
-            margin: -2rem auto 2rem;
-            background-color: antiquewhite;
-            border-radius: 1.5rem;
-            padding: 2.5rem;
-            position: relative;}
-        /*Настройки элементов обратной свзи */
-        textarea {resize: vertical; min-height: 120px;}
-        button {background-color: crimson; color: aliceblue;}
-        /*Нижняя область */
-        footer { margin-top: 2rem; padding: 2rem 1 rem;
-            text-align: center; color: aliceblue;
-            background-color: crimson;
-        }
-        /*Разделы, общий вид */
-        section {background-color: white; border-radius: 0.5rem;}
     </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
+<body class="container"> 
     <!--Работа над основной разметкой сайта
     Заголовок страницы -->
     <header>
@@ -47,23 +21,34 @@
         <p>Волонтер и социальный активист</p>
         
     </header>
-    <main>
-        <!--Изображение -->
-        <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
-        <!--Боковая панель -->
-        <aside>Основное место взятия заданий для волонтерской деятельности - сайт Добро.ру</aside>
-        <!--Дополнительные параграфы обо мне
-        Секция навыков -->
-        <section>
+    <!--Меню-->
+    <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#actions">Текущие акции</a>
+        <a href="#roles">Роли в команде</a>
+        <a href="#contact">Обратная связь</a>
+    </nav>
+    <!--Основная разметка-->
+    <main class="content">
+        <section id="about" >
+            <div class="content-row">
+                <!--Изображение -->
+                <img src="photo.jpg" alt="Таргаева Виктория" width="396" height="594">
+                <!--Боковая панель -->
+                <aside>
+                    Основное место взятия заданий для волонтерской деятельности - сайт <a href="https://dobro.ru/" class="inline-link">Добро.ру</a>.
+                </aside>
+            </div>
+            
+            <!--Дополнительные параграфы обо мне
+            Секция навыков -->
             <h2>Навыки</h2>
             <ul>
                 <li>Умение разговаривать со старшими, слушать и ухаживать за ними;</li>
                 <li>Трудолюбие, упорность, выносливость</li>
                 <li>Все схватываю на лету.</li>
             </ul>
-        </section>
-        <!--Секция проектов -->
-        <section>
+            <!--Секция проектов -->
             <h2>Проекты</h2>
             <h3>В которых участвовала лично:</h3>
             <ul>
@@ -71,6 +56,7 @@
                 <li>Высадка деревьев;</li>
                 <li>Помощь во время мероприятий.</li>
             </ul>
+            
             <h3>Где хотелось бы поучаствовать:</h3>
             <ul>
                 <li>Поиск пропавших людей;</li>
@@ -78,10 +64,55 @@
                 <li>Организация творческого мероприятия или мастер-класса.</li>
             </ul>
         </section>
+        
+        <section id="actions" style="margin-bottom: 20px;">
+            <h2>Текущие акции</h2>
+            <div class="art_action">
+                <article class="action_card">
+                    <h3 class="art_m_text">Субботник</h3>
+                    <time datetime="2026-10-03">3 октября 2026</time>
+                    <p><strong>Роль:</strong> участник</p>
+                    <p>Уборка территории дома от листвы и мусора.</p>
+                </article>
+                <article class="action_card">
+                    <h3 class="art_m_text">Собрание клуба</h3>
+                    <time datetime="2026-10-10">10 октября 2026</time>
+                    <p><strong>Роль:</strong> организатор</p>
+                    <p>Еженедельное собрание клуба настольных игр.</p>
+                </article>
+                <article class="action_card">
+                    <h3 class="art_m_text">Помощь в приюте</h3>
+                    <time datetime="2026-09-17">17 сентября 2026</time>
+                    <p><strong>Роль:</strong> волонтер</p>
+                    <p>Привоз корма в приюют, уход за животными.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="roles">
+            <h2>Роли в команде</h2>
+            <div class="art_roles">
+                <article class="role-card">
+                    <div class="role-icon" >📋</div>
+                    <h3 class="art_m_text">Организатор</h3>
+                    <p>Планирует мероприятие, подготавливает место проведения, собирает команду.</p>
+                </article>
+                <article class="role-card">
+                    <div class="role-icon" >🛠️</div>
+                    <h3 class="art_m_text">Участник</h3>
+                    <p>Исполняет указания руководителя или организатора, помогает во время мероприятия.</p>
+                </article>
+                <article class="role-card">
+                    <div class="role-icon" >👩‍🍳</div>
+                    <h3 class="art_m_text">Волонтер</h3>
+                    <p>Вместе с командой выполняет общественно значимую работу.</p>
+                </article>
+            </div>
+        </section>
         <!--Настройка окна обратной связи -->
-        <section>
+        <section id="contact">
             <h2>Обратная связь</h2>
-            <form action="">
+            <form action="index.html">
             <div class="form-group">
                 <label for="name">Имя:</label>
                 <input type="text" name="name" id="name" placeholder="Иванов Иван Иванович" required>
@@ -94,11 +125,12 @@
                 <label for="message">Сообщение:</label>
                 <textarea name="message" id="message" rows="4" placeholder="Введите ваше сообщение:"></textarea>
             </div>
-            <button type="submit">Отправить</button>
+            <button type="submit"><span style="transform: rotate(45deg); display: block;">➤</span></button>
             </form>
         </section>
     </main>
     <!--Нижняя панель -->
-    <footer><p>2026 Сайт Таргаевой Виктории. Все права защищены.</p></footer>
+    <footer><p>&copy; 2026 Сайт Таргаевой Виктории. Все права защищены.</p></footer>
+    <script src="scrip.js"></script>
 </body>
 </html>
